@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^', include('users.urls', namespace='users')),
     url(r'^', include('address.urls', namespace='address')),
     url(r'^', include('house.urls', namespace='house')),
+    url(r'^', include('order.urls', namespace='order')),
 
 ]

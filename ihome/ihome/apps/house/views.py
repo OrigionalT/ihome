@@ -20,9 +20,6 @@ from ihome.utils.views import *
 from users.models import User
 
 
-
-
-
 class HousesView(LoginRequiredJSONMixin, View):
     def get(self, request, house_id):
         try:
@@ -36,7 +33,6 @@ class HousesView(LoginRequiredJSONMixin, View):
             beds = str(house_detail.beds)
             capacity = house_detail.capacity
             deposit = house_detail.deposit
-            img_urls = house_detail.index_image_url
             max_days = int(house_detail.max_days)
             min_days = int(house_detail.min_days)
             price = int(house_detail.price)
@@ -54,7 +50,7 @@ class HousesView(LoginRequiredJSONMixin, View):
             comments_dict = {
                 "comment": order.comment,
                 "ctime": order.create_time,
-                "user_name": order.user_set.username,
+                "user_name": order.user.username,
             }
             print('----', comments_dict, '----')
             comments_list.append(comments_dict)
@@ -72,7 +68,7 @@ class HousesView(LoginRequiredJSONMixin, View):
             "deposit": deposit,
             "facilities": facility_list,
             "hid": house_id,
-            "img_urls": img_urls,
+            "img_urls": house_img_list,
             "max_days": max_days,
             "min_days": min_days,
             "price": price,
@@ -89,6 +85,7 @@ class HousesView(LoginRequiredJSONMixin, View):
         }
 
         return JsonResponse({'errno': RET.OK, "errmsg": "OK", 'data': data})
+
     def post(self, request):
         '''
         发布新房源API
@@ -143,7 +140,9 @@ class HousesView(LoginRequiredJSONMixin, View):
         except Exception as e:
             return JsonResponse({'errno': RET.DBERR, 'errmsg': '数据保存时出错'})
         return JsonResponse({'errno': RET.OK, 'errmsg': "Ok", 'data': {"house_id": house_id}})
-class MyHouseView(LoginRequiredJSONMixin,View):
+
+
+class MyHouseView(LoginRequiredJSONMixin, View):
     def get(self, request):
         # 获取user
         user = request.user
@@ -152,13 +151,22 @@ class MyHouseView(LoginRequiredJSONMixin,View):
         # 创建data列表
         data = []
         # 迭代数据对象获取数据
+        # user_house_info = House.objects.filter(id=1)
+        #     for house in user_house_info:
+        #         urls = []
+        #         for list_dict in list(house.houseimage_set.all()):
+        #             urls.append(list_dict.url)
         for house in user_house_info:
+            urls = []
+            for list_dict in house.houseimage_set.all():
+                urls.append(list_dict.url)
             data_dict = {
                 'address': house.address,
                 'area_name': house.area.name,
                 'ctime': house.create_time.strftime('%Y-%m-%d'),
                 'house_id': house.id,
-                'img_url': house.index_image_url,
+                'img_url': urls[0],
+
                 'order_count': house.order_count,
                 'price': house.price,
                 'room_count': house.room_count,
@@ -168,6 +176,8 @@ class MyHouseView(LoginRequiredJSONMixin,View):
             data.append(data_dict)
             print(data_dict)
         return JsonResponse({'errno': RET.OK, 'errmsg': 'OK', 'data': data})
+
+
 class HousesImageView(LoginRequiredJSONMixin, View):
     def post(self, request, house_id):
         house_image = request.FILES.get('house_image')
@@ -177,7 +187,8 @@ class HousesImageView(LoginRequiredJSONMixin, View):
         user = request.user
 
         try:
-            new_house_image_url = user.house_set.filter(id=house_id).update(index_image_url=house_image_url)
+            new_house_image_url = House.objects.get(id=house_id).houseimage_set.create(url=house_image_url,
+                                                                                       house_id=house_id)
         except DatabaseError:
             return JsonResponse({
                 'errno': RET.DATAERR,
@@ -186,80 +197,86 @@ class HousesImageView(LoginRequiredJSONMixin, View):
 
         return JsonResponse({'errno': RET.OK, 'errmsg': "OK", 'data': {"url": house_image_url}})
 
+
 class Index(View):
-    def get(self,request):
+    def get(self, request):
         houses = House.objects.all().order_by('?')[:5]
 
         data = []
         for house in houses:
             house_dict = {
-                'house_id':house.id,
-                'img_url':house.index_image_url,
-                'title':house.title
+                'house_id': house.id,
+                'img_url': house.index_image_url,
+                'title': house.title
             }
             data.append(house_dict)
 
-
         return JsonResponse({
-            'data':data,
-            'errmsg':'OK',
+            'data': data,
+            'errmsg': 'OK',
             'errno': 0
         })
+
+
 class Search(View):
-    def get(self,request):
+    def get(self, request):
         aid = request.GET.get('aid')
         sd = request.GET.get('sd')
         ed = request.GET.get('ed')
         sk = request.GET.get('sk')
-        p = request.GET.get('p',1)
+        p = request.GET.get('p', 1)
 
-        t_sd = datetime.datetime.strptime(sd,"%Y-%m-%d")
-        t_ed = datetime.datetime.strptime(ed,"%Y-%m-%d")
+        t_sd = datetime.datetime.strptime(sd, "%Y-%m-%d")
+        t_ed = datetime.datetime.strptime(ed, "%Y-%m-%d")
         days = t_ed - t_sd
         int_days = int(str(days)[0:1])
         houses = []
 
         if sk == 'booking':
-            area_houses = House.objects.filter(area_id=aid,min_days__lte=int_days,max_days__gte=int_days).order_by('-order_count')
+            area_houses = House.objects.filter(area_id=aid, min_days__lte=int_days, max_days__gte=int_days).order_by(
+                '-order_count')
 
         if sk == 'new':
-            area_houses = House.objects.filter(area_id=aid, min_days__lte=int_days, max_days__gte=int_days).order_by('-create_time')
+            area_houses = House.objects.filter(area_id=aid, min_days__lte=int_days, max_days__gte=int_days).order_by(
+                '-create_time')
 
         if sk == 'price-inc':
-            area_houses = House.objects.filter(area_id=aid, min_days__lte=int_days, max_days__gte=int_days).order_by('price')
+            area_houses = House.objects.filter(area_id=aid, min_days__lte=int_days, max_days__gte=int_days).order_by(
+                'price')
 
         if sk == 'price-des':
-            area_houses = House.objects.filter(area_id=aid, min_days__lte=int_days, max_days__gte=int_days).order_by('-price')
+            area_houses = House.objects.filter(area_id=aid, min_days__lte=int_days, max_days__gte=int_days).order_by(
+                '-price')
 
         for house in area_houses:
             house_dict = {
-                'address':house.address,
-                'area_name':house.area.name,
-                'ctime':house.create_time,
-                'house_id':house.id,
-                'img_url':house.index_image_url,
-                'order_count':house.order_count,
-                'price':house.price,
-                'room_count':house.room_count,
-                'title':house.title,
-                'user_avatar':house.user.avatar_url
+
+                'address': house.address,
+                'area_name': house.area.name,
+                'ctime': house.create_time,
+                'house_id': house.id,
+                'img_url': house.index_image_url,
+                'order_count': house.order_count,
+                'price': house.price,
+                'room_count': house.room_count,
+                'title': house.title,
+                'user_avatar': house.user.avatar_url
             }
             houses.append(house_dict)
 
-
         page_num = int(p)
         try:
-            paginator = Paginator(houses,3)
+            paginator = Paginator(houses, 3)
             page_house = paginator.page(page_num)
             total_page = paginator.num_pages
         except Exception as e:
-            return JsonResponse({'errno':RET.DBERR,'errmsg':'分页失败'})
+            return JsonResponse({'errno': RET.DBERR, 'errmsg': '分页失败'})
 
         return JsonResponse({
-            'data':{
-                'houses':houses,
-                'total_page':total_page
+            'data': {
+                'houses': houses,
+                'total_page': total_page
             },
-            'errmsg':'请求成功',
+            'errmsg': '请求成功',
             'errno': 0
         })
