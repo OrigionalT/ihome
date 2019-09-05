@@ -1,199 +1,337 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 import json
-import logging
-
-# Create your views here.
 import random
 import re
 
+from django.contrib.auth import login, logout, authenticate
+from django.http import JsonResponse, HttpResponseForbidden, HttpResponse
+from django.shortcuts import render, redirect
 
-from django import http
-from django.contrib.auth import login, authenticate, logout
+# Create your views here.
 from django.views import View
 from django_redis import get_redis_connection
 from pymysql import DatabaseError
 
+from ihome.utils.fastdfs.fastdfs_storage import FastDFSStorage
+from ihome.utils.response_code import RET
+from ihome.utils.views import LoginRequiredMixin
 from libs.captcha.captcha import captcha
 from users.models import User
 import logging
+from django.conf import settings
 
-from users.response_code import RET
+logger = logging.getLogger('django')
 
-logger = logging.getLogger()
+
+class RegisterView(View):
+    """用户注册"""
+
+    def get(self, request):
+        """
+        提供注册界面
+        :param request: 请求对象
+        :return: 注册界面
+        """
+        return render(request, 'register.html')
+
+    def post(self, request):
+        """注册"""
+        json_dict = json.loads(request.body)
+        mobile = json_dict.get('mobile')
+        phonecode = json_dict.get('phonecode')
+        password = json_dict.get('password')
+        password2 = json_dict.get('password2')
+
+        if not all([mobile, phonecode, password, password2]):
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "缺少必传参数"
+            })
+
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "请输入正确手机号"
+            })
+
+        redis_conn = get_redis_connection('verify_code')
+        sms_code_server = redis_conn.get('sms_code_%s' % mobile)
+        if sms_code_server is None:
+            return render(request, 'register.html', {'sms_code_errmsg': '无效的短信验证码'})
+
+        if phonecode != sms_code_server.decode():
+            return render(request, 'register.html', {'sms_code_errmsg': '输入短信验证码有误'})
+
+        if not re.match(r'[0-9A-Za-z]{6,20}$', password):
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "请输入6-20位密码"
+            })
+
+        if password != password2:
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "两次密码输入不一致"
+            })
+
+        try:
+            user = User.objects.create_user(username=mobile, password=password, mobile=mobile)
+        except DatabaseError:
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "注册失败"
+            })
+
+        login(request, user)
+
+        return JsonResponse({
+            'errno': RET.OK,
+            'errmsg': "注册成功"
+        })
 
 
 class ImageCodeView(View):
+    """图片验证码"""
 
     def get(self, request):
-        '''
-        生成图形验证码, 保存到redis中, 另外返回图片
-        :param request:
-        :param uuid:
-        :return:
-        '''
-        # 当前图片验证码UUID
         cur = request.GET.get('cur')
-        # 上一次图片验证码UUID
         pre = request.GET.get('pre')
-        print('cur',cur)
-        print(pre)
-        if not all([cur, pre]):
-            return http.JsonResponse({'errno': RET.PARAMERR,
-                                      'errmsg': '参数错误'})
-        # 1.生成图形验证码
+
         text, image = captcha.generate_captcha()
 
-        # 2.链接redis, 获取链接对象
         redis_conn = get_redis_connection('verify_code')
 
-        # 3.利用链接对象, 保存数据到redis
-        # redis_conn.setex('key', 'expire', 'value')
-        redis_conn.setex('img_{}'.format(cur), 300, text)
-        # redis_conn.setex('img_{}'.format(pre), 300, text)
-        image_code_server = redis_conn.get('img_{}'.format(cur))
-        print('image_code', image_code_server)
-        # 4.返回(图片)
-        return http.HttpResponse(image, content_type='image/jpg')
+        redis_conn.setex('img_%s' % cur, 300, text)
+
+        return HttpResponse(image, content_type='image/jpg')
 
 
 class SMSCodeView(View):
+    """手机验证码"""
 
     def post(self, request):
-        dict = json.loads(request.body)
-        user = User
-        mobile = dict.get('mobile')
-        image_code = dict.get('image_code')
-        image_code_id = dict.get('image_code_id')
+        json_dict = json.loads(request.body)
+        mobile = json_dict.get('mobile')
+        image_code = json_dict.get('image_code')
+        image_code_id = json_dict.get('image_code_id')
+
         redis_conn = get_redis_connection('verify_code')
-        if not all([image_code_id, image_code]):
-            return http.JsonResponse({'errno': RET.PARAMERR,
-                                      'errmsg': '参数错误'})
-        if not re.match(r'^1[345789]\d{9}$', mobile):
-            return http.JsonResponse({'errno': RET.PARAMERR,
-                                      'errmsg': '手机号码错误'})
 
-        # if not user.objects.get(mobile=mobile):
-        #     return http.JsonResponse({'errno': RET.PARAMERR,
-        #                               'errmsg': '手机号已注册错误'})
-
-        '''
-                接收手机号+uuid+图形验证码, 进行验证, 如果通过,发送短信验证码
-                :param request:
-                :param mobile:
-                :return:
-                '''
-
-        # 0. 从redis中取值:
-        flag = redis_conn.get('send_flag_{}'.format(mobile))
+        flag = redis_conn.get('send_flag_%s' % mobile)
         if flag:
-            return http.JsonResponse({'code': RET.THROTTLINGERR,
-                                      'errmsg': '发送短信过于频繁'})
+            return JsonResponse({
+                'code': 0,
+                'errmsg': '发送短信过于频繁'
+            })
 
-        # 4.从redis中取出图形验证码
-        image_code_server = redis_conn.get('img_{}'.format(image_code_id))
-        if not image_code_server:
-            return http.JsonResponse({'errno': RET.DBERR, 'errmsg': '验证码过期'})
+        if not all([mobile, image_code, image_code_id]):
+            return JsonResponse({
+                'code': RET.NODATA,
+                'errmsg': '缺少必传参数'
+            })
 
-        # 5.删除redis中的图形验证码
+        image_code_server = redis_conn.get('img_%s' % image_code_id)
+
+        if image_code_server is None:
+            return JsonResponse({
+                'code': RET.DATAERR,
+                'errmsg': '图形验证码失效'
+            })
+
         try:
-            redis_conn.delete('img_{}'.format(image_code_id))
+            redis_conn.delete('img_%s' % image_code_id)
         except Exception as e:
             logger.error(e)
-            # logger.info(e)
-        print('image_code_ID',image_code_id)
-        print('image_code',image_code)
-        print('imas',image_code_server.decode().lower())
-        # 6.把 前端传入的和redis中的进行对比
-        if image_code.lower() != image_code_server.decode().lower():
-            return http.JsonResponse({'code': RET.DBERR,
-                                      'errmsg': '验证码输入错误'})
 
-        # 7.生成一个随机数, 作为短信验证码(6)
+        image_code_server = image_code_server.decode()
+
+        if image_code.lower() != image_code_server.lower():
+            return JsonResponse({
+                'code': RET.DATAERR,
+                'errmsg': '输入图形验证码有误'
+            })
+
         sms_code = '%06d' % random.randint(0, 999999)
         logger.info(sms_code)
-        print('sms',sms_code)
+
         pl = redis_conn.pipeline()
 
-        # 8.往redis中存储
-        pl.setex('send_sms_{}'.format(mobile),
-                 300,
-                 sms_code)
+        pl.setex('sms_code_%s' % mobile, 300, sms_code)
+        pl.setex('send_flag_%s' % mobile, 60, 1)
 
-        pl.setex('send_flag_{}'.format(mobile),
-                 60,
-                 1)
-
-        # 指定管道:
         pl.execute()
 
-        # 10.返回结果(json)
-        return http.JsonResponse({'code': RET.OK,
-                                  'errmsg': 'ok'})
+        return JsonResponse({
+            'code': RET.OK,
+            'errmsg': '发送短信成功'
+        })
 
-        # else:
-        #     return http.JsonResponse({'code': RETCODE.OK,
-        #                               'errmsg': 'ok'})
 
-class RegisterView(View):
+class Login(View):
+    """登录"""
 
-    def post(self,request):
+    def post(self, request):
         json_dict = json.loads(request.body)
-        mobile =json_dict.get('mobile')
-        phonecode =json_dict.get('phonecode')
-        password =json_dict.get('password')
-        password2 =json_dict.get('password2')
-        sms_code_client = json_dict.get('sms_code')
+        mobile = json_dict.get('mobile')
+        password = json_dict.get('password')
 
-        # 2.校验参数(总体 + 单个)
-        # 2.1查看是否有为空的参数:
-        if not all([mobile, password, password2, phonecode]):
-            return http.HttpResponseForbidden('缺少必传参数')
+        if not all([mobile, password]):
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "缺少必传参数"
+            })
 
-        if not re.match(r'^[0-9A-Za-z]{8,20}$', password):
-            return http.HttpResponseForbidden('密码为8-20位的字符串')
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "请输入正确手机号"
+            })
 
-        if password != password2:
-            return http.HttpResponseForbidden('密码不一致')
+            # 判断密码是否是6-20个数字
+        if not re.match(r'^[0-9A-Za-z]{6,20}$', password):
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "请输入6-20位密码"
+            })
 
-        if not re.match(r'^1[345789]\d{9}$', mobile):
-            return http.HttpResponseForbidden('手机号格式不正确')
+            # 认证登录用户
+        user = authenticate(username=mobile, password=password)
+        if user is None:
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "用户名或密码不正确"
+            })
 
-
-        # 补充: 检验短信验证码的逻辑:
-        # 链接redis, 获取链接对象
-        redis_conn = get_redis_connection('verify_code')
-
-        # 从redis取保存的短信验证码
-        sms_code_server = redis_conn.get('send_sms_%s' % mobile)
-        if sms_code_server is None:
-            return http.JsonResponse({'errno':RET.DBERR,'errmsg': '无效的短信验证码'})
-
-        # 对比
-        if sms_code_client != sms_code_server.decode():
-            return http.JsonResponse({'errno':RET.DBERR,'sms_code_errmsg': '输入的短信验证码有误'})
-
-        # 3.往mysql保存数据
-        try:
-            user = User.objects.create_user(password=password,
-                                            username=mobile)
-        except DatabaseError:
-            return http.JsonResponse({'errno':RET.DBERR,'register_errmsg': '注册失败'})
-
-        # 实现状态保持: session:
+        # 实现状态保持
         login(request, user)
 
-        # 4.返回结果, 成功则跳转到首页
-        # return HttpResponse('跳转到首页没有完成')
-        # return redirect(reverse('contents:index'))
+        return JsonResponse({
+            'errno': RET.OK,
+            'errmsg': "登录成功"
+        })
 
-        # 生成响应对象
-        response = http.HttpResponse()
 
-        # 在响应对象中设置用户名信息.
-        # 将用户名写入到 cookie，有效期 15 天
-        response.set_cookie('username', user.username, max_age=3600 * 24 * 15)
+class Session(View):
 
-        # 返回响应结果
-        return response
+    def get(self, request):
+        user = request.user
+
+        if not user:
+            return JsonResponse({
+                'errno': 4101,
+                'errmsg': "未登录"
+            })
+
+        return JsonResponse({
+            'errno': 0,
+            'errmsg': "OK",
+            'data': {"user_id": user.id, "name": user.username}
+        })
+
+
+class Logout(View):
+
+    def delete(self, request):
+        user = request.user
+
+        if not user:
+            return JsonResponse({
+                'errno': RET.SESSIONERR,
+                'errmsg': "用户未登录"
+            })
+
+        logout(request)
+
+        return JsonResponse({
+            'errno': RET.OK,
+            'errmsg': "用户已退出",
+        })
+
+
+class user_profile(LoginRequiredMixin, View):
+    def get(self, request):
+        user = request.user
+
+        return JsonResponse({
+            'errno': RET.OK,
+            'errmsg': "OK",
+            'data': {
+                'name': user.username,
+                'avatar_url': user.avatar_url,
+                'mobile': user.mobile
+            }
+        })
+
+    def post(self, request):
+        json_dict = json.loads(request.body)
+        name = json_dict.get('name')
+
+        user = request.user
+
+        if not name:
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "参数校验失败",
+            })
+
+        try:
+            new_name_user = User.objects.filter(id=user.id).update(username=name)
+        except DatabaseError:
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "修改失败",
+            })
+
+        return JsonResponse({
+            'errno': 0,
+            'errmsg': "保存成功",
+        })
+
+
+class avatar(LoginRequiredMixin, View):
+    def post(self, request):
+        avatar = request.FILES.get('avatar')
+        file_id = FastDFSStorage.save(self, name='', content=avatar)
+        avatar_url = settings.FDFS_URL + file_id
+
+        user = request.user
+
+        try:
+            new_user = User.objects.filter(id=user.id).update(avatar_url=avatar_url)
+        except DatabaseError:
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "上传失败",
+            })
+
+        return JsonResponse({
+            'errno': RET.OK,
+            'errmsg': "OK",
+            'data': {
+                'avatar_url': user.avatar_url,
+            }
+        })
+
+
+class Auth(LoginRequiredMixin, View):
+    def get(self, request):
+        return JsonResponse({'errno': RET.OK, 'errmsg': 'success',
+                             'data': {'real_name': request.user.real_name, 'id_card': request.user.id_card}})
+
+    def post(self, request):
+        user = request.user
+        json_dict = json.loads(request.body)
+        real_name = json_dict.get('real_name')
+        id_card = json_dict.get('id_card')
+
+        try:
+            new_user = User.objects.filter(id=user.id).update(real_name=real_name, id_card=id_card)
+        except DatabaseError:
+            return JsonResponse({
+                'errno': RET.DATAERR,
+                'errmsg': "修改失败",
+            })
+
+        return JsonResponse({
+            'errno': RET.OK,
+            'errmsg': "OK"
+        })

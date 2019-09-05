@@ -1,0 +1,1229 @@
+INFO 2019-09-04 08:02:41,233 basehttp 124 "GET /static/html/register.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,295 basehttp 124 "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,317 basehttp 124 "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,324 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,328 basehttp 124 "GET /static/css/ihome/main.css HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,333 basehttp 124 "GET /static/css/ihome/register.css HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,338 basehttp 124 "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,342 basehttp 124 "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,354 basehttp 124 "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,357 basehttp 124 "GET /static/images/logo@128x59.png HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,483 basehttp 124 "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 304 0
+INFO 2019-09-04 08:02:41,596 basehttp 124 "GET /api/v1.0/imagecode?cur=ba1ae66b-94c1-4e72-bc48-3dbaff766d3b&pre= HTTP/1.1" 301 0
+ERROR 2019-09-04 08:02:41,620 exception 135 Internal Server Error: /api/v1.0/imagecode/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 104, in get
+    text, image = captcha.generate_captcha()
+AttributeError: module 'libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2019-09-04 08:02:41,673 basehttp 124 "GET /api/v1.0/imagecode/?cur=ba1ae66b-94c1-4e72-bc48-3dbaff766d3b&pre= HTTP/1.1" 500 81131
+WARNING 2019-09-04 08:02:41,686 base 152 Not Found: /favicon.ico
+WARNING 2019-09-04 08:02:41,690 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4320
+INFO 2019-09-04 08:02:43,642 basehttp 124 "GET /api/v1.0/imagecode?cur=0228995c-27b6-4456-9da0-772a540f1850&pre=ba1ae66b-94c1-4e72-bc48-3dbaff766d3b HTTP/1.1" 301 0
+ERROR 2019-09-04 08:02:43,649 exception 135 Internal Server Error: /api/v1.0/imagecode/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 104, in get
+    text, image = captcha.generate_captcha()
+AttributeError: module 'libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2019-09-04 08:02:43,687 basehttp 124 "GET /api/v1.0/imagecode/?cur=0228995c-27b6-4456-9da0-772a540f1850&pre=ba1ae66b-94c1-4e72-bc48-3dbaff766d3b HTTP/1.1" 500 81527
+INFO 2019-09-04 08:02:44,251 basehttp 124 "GET /api/v1.0/imagecode?cur=d933da41-41da-4c02-b2f5-0a97ca16589d&pre=0228995c-27b6-4456-9da0-772a540f1850 HTTP/1.1" 301 0
+ERROR 2019-09-04 08:02:44,254 exception 135 Internal Server Error: /api/v1.0/imagecode/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 104, in get
+    text, image = captcha.generate_captcha()
+AttributeError: module 'libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2019-09-04 08:02:44,291 basehttp 124 "GET /api/v1.0/imagecode/?cur=d933da41-41da-4c02-b2f5-0a97ca16589d&pre=0228995c-27b6-4456-9da0-772a540f1850 HTTP/1.1" 500 81527
+INFO 2019-09-04 08:02:44,814 basehttp 124 "GET /api/v1.0/imagecode?cur=0530d068-828c-474c-8a97-c7fc0c789de1&pre=d933da41-41da-4c02-b2f5-0a97ca16589d HTTP/1.1" 301 0
+ERROR 2019-09-04 08:02:44,817 exception 135 Internal Server Error: /api/v1.0/imagecode/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 104, in get
+    text, image = captcha.generate_captcha()
+AttributeError: module 'libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2019-09-04 08:02:44,852 basehttp 124 "GET /api/v1.0/imagecode/?cur=0530d068-828c-474c-8a97-c7fc0c789de1&pre=d933da41-41da-4c02-b2f5-0a97ca16589d HTTP/1.1" 500 81527
+INFO 2019-09-04 08:02:46,676 basehttp 124 "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 304 0
+INFO 2019-09-04 08:04:10,637 basehttp 124 "GET /api/v1.0/imagecode?cur=101efe4f-c044-4f61-82da-5c2763469f3b&pre=0530d068-828c-474c-8a97-c7fc0c789de1 HTTP/1.1" 301 0
+INFO 2019-09-04 08:04:10,668 basehttp 124 "GET /api/v1.0/imagecode/?cur=101efe4f-c044-4f61-82da-5c2763469f3b&pre=0530d068-828c-474c-8a97-c7fc0c789de1 HTTP/1.1" 200 3411
+INFO 2019-09-04 08:04:33,588 views 159 950845
+INFO 2019-09-04 08:04:33,595 basehttp 124 "POST /api/v1.0/smscode/ HTTP/1.1" 200 63
+INFO 2019-09-04 08:04:34,943 basehttp 124 "GET /api/v1.0/imagecode?cur=65204225-6c31-47f3-aa75-f16a293cea18&pre=101efe4f-c044-4f61-82da-5c2763469f3b HTTP/1.1" 301 0
+INFO 2019-09-04 08:04:34,968 basehttp 124 "GET /api/v1.0/imagecode/?cur=65204225-6c31-47f3-aa75-f16a293cea18&pre=101efe4f-c044-4f61-82da-5c2763469f3b HTTP/1.1" 200 3533
+INFO 2019-09-04 08:04:59,814 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 200 79
+ERROR 2019-09-04 08:05:03,309 exception 135 Internal Server Error: /api/v1.0/user/register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 61, in post
+    return render(request, 'register.html', {'sms_code_errmsg': '无效的短信验证码'})
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2019-09-04 08:05:03,329 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 500 17943
+ERROR 2019-09-04 08:05:13,722 exception 135 Internal Server Error: /api/v1.0/user/register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 61, in post
+    return render(request, 'register.html', {'sms_code_errmsg': '无效的短信验证码'})
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2019-09-04 08:05:13,750 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 500 17943
+ERROR 2019-09-04 08:05:32,455 exception 135 Internal Server Error: /api/v1.0/user/register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 61, in post
+    return render(request, 'register.html', {'sms_code_errmsg': '无效的短信验证码'})
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2019-09-04 08:05:32,486 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 500 17943
+ERROR 2019-09-04 08:05:34,880 exception 135 Internal Server Error: /api/v1.0/user/register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 61, in post
+    return render(request, 'register.html', {'sms_code_errmsg': '无效的短信验证码'})
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2019-09-04 08:05:34,898 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 500 17943
+ERROR 2019-09-04 08:05:35,395 exception 135 Internal Server Error: /api/v1.0/user/register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 61, in post
+    return render(request, 'register.html', {'sms_code_errmsg': '无效的短信验证码'})
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2019-09-04 08:05:35,412 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 500 17943
+ERROR 2019-09-04 08:05:35,570 exception 135 Internal Server Error: /api/v1.0/user/register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 61, in post
+    return render(request, 'register.html', {'sms_code_errmsg': '无效的短信验证码'})
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2019-09-04 08:05:35,588 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 500 17943
+INFO 2019-09-04 08:09:43,277 basehttp 124 "GET /static/html/register.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:09:43,638 basehttp 124 "GET /api/v1.0/imagecode?cur=612e6c46-402f-4616-9cae-fef557663eb0&pre= HTTP/1.1" 301 0
+INFO 2019-09-04 08:09:43,677 basehttp 124 "GET /api/v1.0/imagecode/?cur=612e6c46-402f-4616-9cae-fef557663eb0&pre= HTTP/1.1" 200 3450
+INFO 2019-09-04 08:11:02,870 views 159 375271
+INFO 2019-09-04 08:11:02,871 basehttp 124 "POST /api/v1.0/smscode/ HTTP/1.1" 200 63
+INFO 2019-09-04 08:11:03,977 basehttp 124 "GET /api/v1.0/imagecode?cur=2a85b622-f567-4f03-a355-5d759c57ded2&pre=612e6c46-402f-4616-9cae-fef557663eb0 HTTP/1.1" 301 0
+INFO 2019-09-04 08:11:03,990 basehttp 124 "GET /api/v1.0/imagecode/?cur=2a85b622-f567-4f03-a355-5d759c57ded2&pre=612e6c46-402f-4616-9cae-fef557663eb0 HTTP/1.1" 200 2763
+ERROR 2019-09-04 08:12:07,613 exception 135 Internal Server Error: /api/v1.0/user/register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '17717674881' for key 'username'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 81, in post
+    user = User.objects.create_user(username=mobile, password=password,mobile=mobile)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/contrib/auth/models.py", line 159, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/contrib/auth/models.py", line 153, in _create_user
+    user.save(using=self._db)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 80, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '17717674881' for key 'username'")
+ERROR 2019-09-04 08:12:07,685 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 500 22992
+INFO 2019-09-04 08:16:55,865 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 200 3892
+INFO 2019-09-04 08:16:57,573 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 200 3892
+INFO 2019-09-04 08:16:59,575 basehttp 124 "GET /static/html/register.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:16:59,691 basehttp 124 "GET /api/v1.0/imagecode?cur=72c09150-1273-4540-a604-495eb23fb4e3&pre= HTTP/1.1" 301 0
+INFO 2019-09-04 08:16:59,810 basehttp 124 "GET /api/v1.0/imagecode/?cur=72c09150-1273-4540-a604-495eb23fb4e3&pre= HTTP/1.1" 200 3019
+INFO 2019-09-04 08:17:17,618 views 159 020330
+INFO 2019-09-04 08:17:17,628 basehttp 124 "POST /api/v1.0/smscode/ HTTP/1.1" 200 63
+INFO 2019-09-04 08:17:18,731 basehttp 124 "GET /api/v1.0/imagecode?cur=3acae324-ee49-4d50-a63c-02cdec573e3e&pre=72c09150-1273-4540-a604-495eb23fb4e3 HTTP/1.1" 301 0
+INFO 2019-09-04 08:17:18,751 basehttp 124 "GET /api/v1.0/imagecode/?cur=3acae324-ee49-4d50-a63c-02cdec573e3e&pre=72c09150-1273-4540-a604-495eb23fb4e3 HTTP/1.1" 200 2972
+ERROR 2019-09-04 08:18:00,879 exception 135 Internal Server Error: /api/v1.0/user/register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '17717674881' for key 'mobile'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/users/views.py", line 81, in post
+    user = User.objects.create_user(username=mobile, password=password,mobile=mobile)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/contrib/auth/models.py", line 159, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/contrib/auth/models.py", line 153, in _create_user
+    user.save(using=self._db)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 80, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '17717674881' for key 'mobile'")
+ERROR 2019-09-04 08:18:00,928 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 500 22986
+INFO 2019-09-04 08:18:49,436 basehttp 124 "POST /api/v1.0/user/register/ HTTP/1.1" 200 52
+INFO 2019-09-04 08:18:49,460 basehttp 124 "GET /index.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:18:49,466 basehttp 124 "GET /static/html/index.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:18:49,509 basehttp 124 "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15779
+INFO 2019-09-04 08:18:49,518 basehttp 124 "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 200 17216
+INFO 2019-09-04 08:18:49,524 basehttp 124 "GET /static/css/ihome/index.css HTTP/1.1" 200 1909
+INFO 2019-09-04 08:18:49,546 basehttp 124 "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 200 68716
+INFO 2019-09-04 08:18:49,560 basehttp 124 "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 200 32644
+INFO 2019-09-04 08:18:49,565 basehttp 124 "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 593
+INFO 2019-09-04 08:18:49,601 basehttp 124 "GET /static/js/template.js HTTP/1.1" 200 5324
+INFO 2019-09-04 08:18:49,604 basehttp 124 "GET /static/js/ihome/index.js HTTP/1.1" 200 4597
+WARNING 2019-09-04 08:18:49,743 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 08:18:49,755 base 152 Not Found: /api/v1.0/houses/index/
+WARNING 2019-09-04 08:18:49,765 basehttp 124 "GET /api/v1.0/houses/index/ HTTP/1.1" 404 4353
+INFO 2019-09-04 08:18:49,766 basehttp 124 "GET /api/v1.0/session/ HTTP/1.1" 200 75
+INFO 2019-09-04 08:18:49,775 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+INFO 2019-09-04 08:20:15,785 basehttp 124 "GET /search.html?aid=2&aname=%E8%A5%BF%E5%9F%8E%E5%8C%BA&sd=&ed= HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:15,794 basehttp 124 "GET /static/html/search.html HTTP/1.1" 200 4107
+INFO 2019-09-04 08:20:15,832 basehttp 124 "GET /static/css/ihome/search.css HTTP/1.1" 200 2843
+INFO 2019-09-04 08:20:15,839 basehttp 124 "GET /static/js/ihome/search.js HTTP/1.1" 200 7647
+INFO 2019-09-04 08:20:16,021 basehttp 124 "GET /api/v1.0/areas HTTP/1.1" 301 0
+INFO 2019-09-04 08:20:16,062 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+WARNING 2019-09-04 08:20:16,080 base 152 Not Found: /api/v1.0/houses/search/
+WARNING 2019-09-04 08:20:16,081 basehttp 124 "GET /api/v1.0/houses/search/?aid=&sd=&ed=&sk=new&p=1 HTTP/1.1" 404 4396
+INFO 2019-09-04 08:20:17,933 basehttp 124 "GET / HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:18,045 basehttp 124 "GET /api/v1.0/session/ HTTP/1.1" 200 75
+WARNING 2019-09-04 08:20:18,049 base 152 Not Found: /api/v1.0/houses/index/
+WARNING 2019-09-04 08:20:18,049 basehttp 124 "GET /api/v1.0/houses/index/ HTTP/1.1" 404 4353
+INFO 2019-09-04 08:20:18,068 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+WARNING 2019-09-04 08:20:18,150 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 08:20:19,354 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:19,361 basehttp 124 "GET /static/html/my.html HTTP/1.1" 200 3276
+INFO 2019-09-04 08:20:19,388 basehttp 124 "GET /static/css/ihome/my.css HTTP/1.1" 200 1536
+INFO 2019-09-04 08:20:19,400 basehttp 124 "GET /static/js/ihome/my.js HTTP/1.1" 200 976
+INFO 2019-09-04 08:20:19,515 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 108
+INFO 2019-09-04 08:20:23,026 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:23,041 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 200 3389
+INFO 2019-09-04 08:20:23,065 basehttp 124 "GET /static/js/ihome/myhouse.js HTTP/1.1" 200 799
+INFO 2019-09-04 08:20:23,065 basehttp 124 "GET /static/css/ihome/myhouse.css HTTP/1.1" 200 1551
+WARNING 2019-09-04 08:20:23,159 base 93 Method Not Allowed (GET): /api/v1.0/user/auth/
+WARNING 2019-09-04 08:20:23,160 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 405 0
+INFO 2019-09-04 08:20:26,734 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:26,866 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 108
+INFO 2019-09-04 08:20:31,474 basehttp 124 "GET /orders.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:31,480 basehttp 124 "GET /static/html/orders.html HTTP/1.1" 200 5425
+INFO 2019-09-04 08:20:31,503 basehttp 124 "GET /static/css/ihome/orders.css HTTP/1.1" 200 1600
+INFO 2019-09-04 08:20:31,515 basehttp 124 "GET /static/js/ihome/orders.js HTTP/1.1" 200 2804
+WARNING 2019-09-04 08:20:31,595 base 152 Not Found: /api/v1.0/orders/
+WARNING 2019-09-04 08:20:31,596 basehttp 124 "GET /api/v1.0/orders/?role=custom HTTP/1.1" 404 4347
+INFO 2019-09-04 08:20:32,325 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:32,434 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 108
+INFO 2019-09-04 08:20:33,779 basehttp 124 "GET / HTTP/1.1" 302 0
+WARNING 2019-09-04 08:20:33,908 base 152 Not Found: /api/v1.0/houses/index/
+WARNING 2019-09-04 08:20:33,916 basehttp 124 "GET /api/v1.0/houses/index/ HTTP/1.1" 404 4353
+INFO 2019-09-04 08:20:33,924 basehttp 124 "GET /api/v1.0/session/ HTTP/1.1" 200 75
+INFO 2019-09-04 08:20:33,928 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+WARNING 2019-09-04 08:20:33,977 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 08:20:40,989 basehttp 124 "GET /search.html?aid=1&aname=%E4%B8%9C%E5%9F%8E%E5%8C%BA&sd=&ed= HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:41,179 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+WARNING 2019-09-04 08:20:41,196 base 152 Not Found: /api/v1.0/houses/search/
+WARNING 2019-09-04 08:20:41,200 basehttp 124 "GET /api/v1.0/houses/search/?aid=&sd=&ed=&sk=new&p=1 HTTP/1.1" 404 4396
+INFO 2019-09-04 08:20:44,078 basehttp 124 "GET / HTTP/1.1" 302 0
+WARNING 2019-09-04 08:20:44,191 base 152 Not Found: /api/v1.0/houses/index/
+INFO 2019-09-04 08:20:44,195 basehttp 124 "GET /api/v1.0/session/ HTTP/1.1" 200 75
+WARNING 2019-09-04 08:20:44,207 basehttp 124 "GET /api/v1.0/houses/index/ HTTP/1.1" 404 4353
+INFO 2019-09-04 08:20:44,221 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+WARNING 2019-09-04 08:20:44,310 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 08:20:44,982 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:20:45,139 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 108
+INFO 2019-09-04 08:20:48,947 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+WARNING 2019-09-04 08:20:49,049 base 93 Method Not Allowed (GET): /api/v1.0/user/auth/
+WARNING 2019-09-04 08:20:49,050 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 405 0
+INFO 2019-09-04 08:21:05,130 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:21:05,251 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 108
+INFO 2019-09-04 08:21:12,756 basehttp 124 "GET /profile.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:21:12,763 basehttp 124 "GET /static/html/profile.html HTTP/1.1" 200 3393
+INFO 2019-09-04 08:21:12,796 basehttp 124 "GET /static/css/ihome/profile.css HTTP/1.1" 200 2034
+INFO 2019-09-04 08:21:12,804 basehttp 124 "GET /static/js/jquery.form.min.js HTTP/1.1" 200 15248
+INFO 2019-09-04 08:21:12,808 basehttp 124 "GET /static/js/ihome/profile.js?v=5 HTTP/1.1" 200 2411
+INFO 2019-09-04 08:21:12,952 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 108
+INFO 2019-09-04 08:21:21,459 basehttp 124 "POST /api/v1.0/user/avatar/ HTTP/1.1" 200 60
+INFO 2019-09-04 08:21:29,730 basehttp 124 "GET /static/html/profile.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:21:29,898 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 08:21:32,143 basehttp 124 "POST /api/v1.0/user/profile/ HTTP/1.1" 200 50
+INFO 2019-09-04 08:21:35,545 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:21:35,672 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 08:21:40,008 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+WARNING 2019-09-04 08:21:40,123 base 93 Method Not Allowed (GET): /api/v1.0/user/auth/
+WARNING 2019-09-04 08:21:40,123 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 405 0
+INFO 2019-09-04 08:22:00,515 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+WARNING 2019-09-04 08:22:00,609 base 93 Method Not Allowed (GET): /api/v1.0/user/auth/
+WARNING 2019-09-04 08:22:00,610 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 405 0
+INFO 2019-09-04 08:27:44,786 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:27:45,061 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 81
+INFO 2019-09-04 08:27:51,312 basehttp 124 "GET /auth.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:27:51,319 basehttp 124 "GET /static/html/auth.html HTTP/1.1" 200 3033
+INFO 2019-09-04 08:27:51,350 basehttp 124 "GET /static/js/ihome/auth.js HTTP/1.1" 200 2413
+INFO 2019-09-04 08:27:51,480 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 81
+INFO 2019-09-04 08:28:00,128 basehttp 124 "POST /api/v1.0/user/auth/ HTTP/1.1" 200 30
+INFO 2019-09-04 08:28:04,736 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:28:04,870 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 08:28:06,907 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:28:07,039 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+WARNING 2019-09-04 08:28:07,075 base 152 Not Found: /api/v1.0/user/houses/
+WARNING 2019-09-04 08:28:07,078 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 404 4350
+INFO 2019-09-04 08:31:12,098 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:31:12,354 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+ERROR 2019-09-04 08:31:12,385 exception 135 Internal Server Error: /api/v1.0/user/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 44, in get
+    return http.JsonResponse({'data': data, 'errno': RET.OK, 'errmsg': 'OK'})
+AttributeError: module 'http' has no attribute 'JsonResponse'
+ERROR 2019-09-04 08:31:12,418 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 500 17185
+INFO 2019-09-04 08:31:14,299 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:31:14,555 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 08:31:16,810 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:31:16,939 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+ERROR 2019-09-04 08:31:16,983 exception 135 Internal Server Error: /api/v1.0/user/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 44, in get
+    return http.JsonResponse({'data': data, 'errno': RET.OK, 'errmsg': 'OK'})
+AttributeError: module 'http' has no attribute 'JsonResponse'
+ERROR 2019-09-04 08:31:17,021 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 500 17185
+INFO 2019-09-04 08:39:59,937 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:39:59,949 basehttp 124 "GET /static/html/my.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:40:00,299 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 08:40:08,838 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:40:09,059 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+ERROR 2019-09-04 08:40:09,094 exception 135 Internal Server Error: /api/v1.0/user/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 44, in get
+    return http.JsonResponse({'data': data, 'errno': RET.OK, 'errmsg': 'OK'})
+AttributeError: module 'http' has no attribute 'JsonResponse'
+ERROR 2019-09-04 08:40:09,125 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 500 17185
+INFO 2019-09-04 08:44:03,423 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:44:03,584 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+ERROR 2019-09-04 08:44:03,617 exception 135 Internal Server Error: /api/v1.0/user/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 44, in get
+    return http.JsonResponse({'data': data, 'errno': RET.OK, 'errmsg': 'OK'})
+AttributeError: module 'http' has no attribute 'JsonResponse'
+ERROR 2019-09-04 08:44:03,659 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 500 17185
+INFO 2019-09-04 08:47:14,534 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:47:14,716 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+ERROR 2019-09-04 08:47:14,731 exception 135 Internal Server Error: /api/v1.0/user/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 43, in get
+    return http.JsonResponse({'data': data, 'errno': RET.OK, 'errmsg': 'OK'})
+AttributeError: module 'http' has no attribute 'JsonResponse'
+ERROR 2019-09-04 08:47:14,777 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 500 17185
+INFO 2019-09-04 08:47:55,862 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:47:55,960 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+ERROR 2019-09-04 08:47:56,028 exception 135 Internal Server Error: /api/v1.0/user/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 43, in get
+    return http.JsonResponse({ 'errno': RET.OK, 'errmsg': 'OK','data': data})
+AttributeError: module 'http' has no attribute 'JsonResponse'
+ERROR 2019-09-04 08:47:56,073 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 500 17185
+INFO 2019-09-04 08:48:31,282 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 08:48:31,619 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 08:48:31,646 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 42
+INFO 2019-09-04 08:48:38,724 basehttp 124 "GET /newhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 08:48:38,747 basehttp 124 "GET /static/html/newhouse.html HTTP/1.1" 200 15809
+INFO 2019-09-04 08:48:38,790 basehttp 124 "GET /static/css/ihome/newhouse.css HTTP/1.1" 200 2012
+INFO 2019-09-04 08:48:38,790 basehttp 124 "GET /static/js/ihome/newhouse.js?v=3 HTTP/1.1" 200 3108
+INFO 2019-09-04 08:48:38,983 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+WARNING 2019-09-04 08:49:45,217 base 152 Not Found: /api/v1.0/houses/
+WARNING 2019-09-04 08:49:45,218 basehttp 124 "POST /api/v1.0/houses/ HTTP/1.1" 404 4341
+ERROR 2019-09-04 08:51:01,429 exception 135 Internal Server Error: /api/v1.0/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 122, in post
+    return http.JsonResponse({'errno': RET.OK, 'errmsg': "Ok", 'data': {"house_id": house_id}})
+AttributeError: module 'http' has no attribute 'JsonResponse'
+ERROR 2019-09-04 08:51:01,445 basehttp 124 "POST /api/v1.0/houses/ HTTP/1.1" 500 17235
+ERROR 2019-09-04 08:51:04,783 exception 135 Internal Server Error: /api/v1.0/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 122, in post
+    return http.JsonResponse({'errno': RET.OK, 'errmsg': "Ok", 'data': {"house_id": house_id}})
+AttributeError: module 'http' has no attribute 'JsonResponse'
+ERROR 2019-09-04 08:51:04,799 basehttp 124 "POST /api/v1.0/houses/ HTTP/1.1" 500 17235
+INFO 2019-09-04 08:52:32,263 basehttp 124 "POST /api/v1.0/houses/ HTTP/1.1" 200 55
+ERROR 2019-09-04 08:52:43,008 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: post() got multiple values for argument 'house_id'
+ERROR 2019-09-04 08:52:43,047 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 17207
+ERROR 2019-09-04 08:56:20,994 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 136, in post
+    new_house_image_url = user.house_set.get(id=house_id).update(index_image_url=house_image_url)
+AttributeError: 'House' object has no attribute 'update'
+ERROR 2019-09-04 08:56:21,019 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 17400
+ERROR 2019-09-04 08:56:24,859 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 136, in post
+    new_house_image_url = user.house_set.get(id=house_id).update(index_image_url=house_image_url)
+AttributeError: 'House' object has no attribute 'update'
+ERROR 2019-09-04 08:56:24,880 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 17400
+ERROR 2019-09-04 08:56:25,682 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 136, in post
+    new_house_image_url = user.house_set.get(id=house_id).update(index_image_url=house_image_url)
+AttributeError: 'House' object has no attribute 'update'
+ERROR 2019-09-04 08:56:25,703 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 17400
+ERROR 2019-09-04 08:57:21,268 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 142, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/middleware/common.py", line 115, in process_response
+    if response.status_code == 404:
+AttributeError: 'dict' object has no attribute 'status_code'
+ERROR 2019-09-04 08:57:21,291 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 16648
+ERROR 2019-09-04 08:57:23,873 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 142, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/middleware/common.py", line 115, in process_response
+    if response.status_code == 404:
+AttributeError: 'dict' object has no attribute 'status_code'
+ERROR 2019-09-04 08:57:23,896 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 16648
+ERROR 2019-09-04 08:57:25,044 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 142, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/middleware/common.py", line 115, in process_response
+    if response.status_code == 404:
+AttributeError: 'dict' object has no attribute 'status_code'
+ERROR 2019-09-04 08:57:25,076 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 16648
+ERROR 2019-09-04 08:57:25,717 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 142, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/middleware/common.py", line 115, in process_response
+    if response.status_code == 404:
+AttributeError: 'dict' object has no attribute 'status_code'
+ERROR 2019-09-04 08:57:25,738 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 16648
+ERROR 2019-09-04 08:57:26,196 exception 135 Internal Server Error: /api/v1.0/houses/5/images/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 142, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/middleware/common.py", line 115, in process_response
+    if response.status_code == 404:
+AttributeError: 'dict' object has no attribute 'status_code'
+ERROR 2019-09-04 08:57:26,214 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 500 16648
+INFO 2019-09-04 09:00:36,659 basehttp 124 "POST /api/v1.0/houses/5/images/ HTTP/1.1" 200 128
+INFO 2019-09-04 09:00:39,301 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 09:00:39,420 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+ERROR 2019-09-04 09:00:39,477 exception 135 Internal Server Error: /api/v1.0/user/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 44, in get
+    return JsonResponse({ 'errno': RET.OK, 'errmsg': 'OK','data': data})
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/http/response.py", line 530, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/usr/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/serializers/json.py", line 124, in default
+    return super(DjangoJSONEncoder, self).default(o)
+  File "/usr/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'Area' is not JSON serializable
+ERROR 2019-09-04 09:00:39,518 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 500 17940
+INFO 2019-09-04 09:00:41,321 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 09:00:41,462 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+ERROR 2019-09-04 09:00:41,516 exception 135 Internal Server Error: /api/v1.0/user/houses/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/utils/views.py", line 45, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/project/meiduo_project/ihome/ihome/ihome/apps/house/views.py", line 44, in get
+    return JsonResponse({ 'errno': RET.OK, 'errmsg': 'OK','data': data})
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/http/response.py", line 530, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/usr/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/ubuntu/.virtualenvs/django_env/lib/python3.6/site-packages/django/core/serializers/json.py", line 124, in default
+    return super(DjangoJSONEncoder, self).default(o)
+  File "/usr/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'Area' is not JSON serializable
+ERROR 2019-09-04 09:00:41,563 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 500 17940
+INFO 2019-09-04 09:02:30,175 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 09:02:30,325 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 09:02:30,363 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 09:02:31,618 basehttp 124 "GET /detail.html?id=4 HTTP/1.1" 302 0
+INFO 2019-09-04 09:02:31,626 basehttp 124 "GET /static/html/detail.html HTTP/1.1" 200 8198
+INFO 2019-09-04 09:02:31,682 basehttp 124 "GET /static/css/ihome/detail.css HTTP/1.1" 200 4979
+INFO 2019-09-04 09:02:31,698 basehttp 124 "GET /static/js/ihome/detail.js HTTP/1.1" 200 1718
+WARNING 2019-09-04 09:02:31,833 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 09:02:31,834 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4521
+WARNING 2019-09-04 09:02:31,923 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 09:02:33,151 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 10:03:58,477 basehttp 124 "GET /newhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 10:03:58,514 basehttp 124 "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-09-04 10:03:58,529 basehttp 124 "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2019-09-04 10:03:58,532 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 304 0
+INFO 2019-09-04 10:03:58,538 basehttp 124 "GET /static/css/ihome/main.css HTTP/1.1" 304 0
+INFO 2019-09-04 10:03:58,540 basehttp 124 "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 10:03:58,546 basehttp 124 "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 10:03:58,633 basehttp 124 "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 304 0
+INFO 2019-09-04 10:03:58,727 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+INFO 2019-09-04 10:07:37,385 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 10:07:38,110 basehttp 124 "GET /detail.html?id=5 HTTP/1.1" 302 0
+WARNING 2019-09-04 10:07:38,202 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 10:07:38,202 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+INFO 2019-09-04 10:07:39,723 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:29:44,413 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:29:44,421 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,450 basehttp 124 "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,454 basehttp 124 "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,474 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,492 basehttp 124 "GET /static/css/ihome/main.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,500 basehttp 124 "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,502 basehttp 124 "GET /static/css/ihome/myhouse.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,503 basehttp 124 "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,505 basehttp 124 "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,511 basehttp 124 "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,522 basehttp 124 "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,525 basehttp 124 "GET /static/js/template.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,530 basehttp 124 "GET /static/js/ihome/myhouse.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,560 basehttp 124 "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 304 0
+INFO 2019-09-04 12:29:44,648 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 12:29:44,672 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:39:01,814 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:39:01,823 basehttp 124 "GET /static/html/my.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:01,861 basehttp 124 "GET /static/css/ihome/my.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:01,863 basehttp 124 "GET /static/js/ihome/my.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:02,001 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 12:39:03,379 basehttp 124 "GET / HTTP/1.1" 302 0
+INFO 2019-09-04 12:39:03,383 basehttp 124 "GET /static/html/index.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:03,404 basehttp 124 "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:03,409 basehttp 124 "GET /static/css/ihome/index.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:03,413 basehttp 124 "GET /static/images/logo@128x59.png HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:03,415 basehttp 124 "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:03,424 basehttp 124 "GET /static/js/ihome/index.js HTTP/1.1" 304 0
+WARNING 2019-09-04 12:39:03,516 base 152 Not Found: /api/v1.0/houses/index/
+INFO 2019-09-04 12:39:03,521 basehttp 124 "GET /api/v1.0/session/ HTTP/1.1" 200 75
+WARNING 2019-09-04 12:39:03,526 basehttp 124 "GET /api/v1.0/houses/index/ HTTP/1.1" 404 4699
+INFO 2019-09-04 12:39:03,536 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+INFO 2019-09-04 12:39:09,200 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:39:09,281 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 12:39:12,977 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:39:13,055 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 12:39:13,074 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:39:20,578 basehttp 124 "GET /detail.html?id=4 HTTP/1.1" 302 0
+INFO 2019-09-04 12:39:20,583 basehttp 124 "GET /static/html/detail.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:20,603 basehttp 124 "GET /static/css/ihome/detail.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:20,609 basehttp 124 "GET /static/js/ihome/detail.js HTTP/1.1" 304 0
+WARNING 2019-09-04 12:39:20,672 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:39:20,673 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:39:28,985 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:39:29,007 basehttp 124 "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 304 0
+INFO 2019-09-04 12:39:44,078 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:39:47,099 basehttp 124 "GET /detail.html?id=5 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:39:47,268 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:39:47,284 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:39:47,292 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:41:24,864 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:41:29,519 basehttp 124 "GET /detail.html?id=3 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:41:29,651 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:41:29,652 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:41:29,721 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:42:20,269 basehttp 124 "GET /static/html/detail.html HTTP/1.1" 304 0
+WARNING 2019-09-04 12:42:20,574 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:42:20,588 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:42:20,593 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:42:22,907 basehttp 124 "GET /static/html/detail.html HTTP/1.1" 304 0
+WARNING 2019-09-04 12:42:23,045 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 12:42:23,069 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:42:23,069 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+INFO 2019-09-04 12:42:24,372 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:42:25,754 basehttp 124 "GET /detail.html?id=3 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:42:25,925 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 12:42:25,935 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:42:25,936 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+INFO 2019-09-04 12:42:32,182 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:42:35,020 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:42:35,199 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 12:42:35,301 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:42:36,148 basehttp 124 "GET /detail.html?id=5 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:42:36,295 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:42:36,299 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:42:36,325 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:43:01,429 basehttp 124 "GET /static/html/detail.html HTTP/1.1" 304 0
+WARNING 2019-09-04 12:43:01,606 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 12:43:01,647 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:43:01,648 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+INFO 2019-09-04 12:43:02,843 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:43:04,999 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:43:05,173 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 12:43:05,234 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:43:06,191 basehttp 124 "GET /detail.html?id=5 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:43:06,297 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:43:06,298 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:43:06,338 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:43:12,270 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:43:22,235 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:43:22,390 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 12:43:22,419 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:43:24,776 basehttp 124 "GET /detail.html?id=5 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:43:24,958 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:43:24,971 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:43:25,020 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:48:56,659 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:49:02,307 basehttp 124 "GET /detail.html?id=5 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:49:02,671 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:49:02,674 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:49:02,699 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:49:16,129 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:49:17,067 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:49:17,237 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 12:49:18,055 basehttp 124 "GET / HTTP/1.1" 302 0
+WARNING 2019-09-04 12:49:18,201 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 12:49:18,266 base 152 Not Found: /api/v1.0/houses/index/
+WARNING 2019-09-04 12:49:18,272 basehttp 124 "GET /api/v1.0/houses/index/ HTTP/1.1" 404 4699
+INFO 2019-09-04 12:49:18,277 basehttp 124 "GET /api/v1.0/session/ HTTP/1.1" 200 75
+INFO 2019-09-04 12:49:18,280 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+INFO 2019-09-04 12:49:31,745 basehttp 124 "GET /search.html?aid=1&aname=%E4%B8%9C%E5%9F%8E%E5%8C%BA&sd=&ed= HTTP/1.1" 302 0
+INFO 2019-09-04 12:49:31,757 basehttp 124 "GET /static/html/search.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:49:31,795 basehttp 124 "GET /static/css/ihome/search.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:49:31,806 basehttp 124 "GET /static/js/ihome/search.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:49:32,001 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+WARNING 2019-09-04 12:49:32,016 base 152 Not Found: /api/v1.0/houses/search/
+WARNING 2019-09-04 12:49:32,020 basehttp 124 "GET /api/v1.0/houses/search/?aid=&sd=&ed=&sk=new&p=1 HTTP/1.1" 404 4742
+INFO 2019-09-04 12:49:33,359 basehttp 124 "GET / HTTP/1.1" 302 0
+INFO 2019-09-04 12:49:33,482 basehttp 124 "GET /api/v1.0/session/ HTTP/1.1" 200 75
+WARNING 2019-09-04 12:49:33,528 base 152 Not Found: /api/v1.0/houses/index/
+WARNING 2019-09-04 12:49:33,530 basehttp 124 "GET /api/v1.0/houses/index/ HTTP/1.1" 404 4699
+INFO 2019-09-04 12:49:33,535 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+WARNING 2019-09-04 12:49:33,683 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:49:34,548 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:49:34,739 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 12:49:36,981 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:49:37,124 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 12:49:37,153 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:49:38,504 basehttp 124 "GET /detail.html?id=5 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:49:38,709 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:49:38,722 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:49:38,723 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:49:43,192 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:49:43,955 basehttp 124 "GET /detail.html?id=5 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:49:44,120 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:49:44,130 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 4711
+WARNING 2019-09-04 12:49:44,186 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:49:46,531 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:50:59,504 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:50:59,680 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 12:51:00,734 basehttp 124 "GET /profile.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:51:00,753 basehttp 124 "GET /static/html/profile.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:51:00,803 basehttp 124 "GET /static/css/ihome/profile.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:51:00,810 basehttp 124 "GET /static/js/jquery.form.min.js HTTP/1.1" 304 0
+INFO 2019-09-04 12:51:00,831 basehttp 124 "GET /static/js/ihome/profile.js?v=5 HTTP/1.1" 304 0
+INFO 2019-09-04 12:51:00,980 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 12:51:06,741 basehttp 124 "POST /api/v1.0/user/profile/ HTTP/1.1" 200 50
+INFO 2019-09-04 12:51:11,786 basehttp 124 "GET /my.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:51:11,926 basehttp 124 "GET /api/v1.0/user/profile/ HTTP/1.1" 200 183
+INFO 2019-09-04 12:51:14,951 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:51:15,032 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 12:51:15,077 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 924
+INFO 2019-09-04 12:51:17,700 basehttp 124 "GET /newhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:51:17,714 basehttp 124 "GET /static/html/newhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:51:17,742 basehttp 124 "GET /static/css/ihome/newhouse.css HTTP/1.1" 304 0
+INFO 2019-09-04 12:51:17,750 basehttp 124 "GET /static/js/ihome/newhouse.js?v=3 HTTP/1.1" 304 0
+INFO 2019-09-04 12:51:17,928 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+INFO 2019-09-04 12:51:45,174 basehttp 124 "POST /api/v1.0/houses/ HTTP/1.1" 200 55
+INFO 2019-09-04 12:52:06,380 basehttp 124 "POST /api/v1.0/houses/6/images/ HTTP/1.1" 200 128
+INFO 2019-09-04 12:52:09,389 basehttp 124 "GET /static/html/newhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 12:52:09,509 basehttp 124 "GET /api/v1.0/areas/ HTTP/1.1" 200 697
+INFO 2019-09-04 12:52:15,602 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 12:52:15,745 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 12:52:15,802 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 12:54:32,760 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:54:32,924 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:54:32,928 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 12:54:32,976 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:54:48,874 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 12:55:01,369 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:55:01,596 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:55:01,598 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 12:55:01,638 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:55:03,775 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 12:55:08,200 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:55:08,357 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 12:55:08,384 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:55:08,385 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+INFO 2019-09-04 12:55:56,531 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 12:56:00,515 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:56:00,689 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 12:56:00,742 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:56:00,747 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+INFO 2019-09-04 12:56:10,055 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 12:57:53,973 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:57:54,145 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:57:54,157 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 12:57:54,189 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 12:59:28,067 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 12:59:30,873 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 12:59:31,074 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 12:59:31,115 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 12:59:31,180 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:00:14,933 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:00:49,074 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:00:49,256 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:00:49,258 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:00:49,277 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:04:14,100 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:04:40,081 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:04:40,275 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:04:40,279 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:04:40,301 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:04:52,846 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:04:53,070 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:04:53,070 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:04:56,921 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:08:34,470 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:08:35,800 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:08:35,940 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:08:35,945 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:08:35,975 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:08:37,461 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:08:38,747 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:08:38,888 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 13:08:38,952 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:08:38,956 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+INFO 2019-09-04 13:08:40,746 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:08:51,664 basehttp 124 "GET /myhouse.html HTTP/1.1" 302 0
+INFO 2019-09-04 13:08:51,833 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 13:08:51,896 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:08:56,537 basehttp 124 "GET /static/html/myhouse.html HTTP/1.1" 304 0
+INFO 2019-09-04 13:08:56,621 basehttp 124 "GET /api/v1.0/user/auth/ HTTP/1.1" 200 97
+INFO 2019-09-04 13:08:56,719 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:08:59,646 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:08:59,933 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:08:59,936 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:08:59,970 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:09:24,165 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:09:25,243 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:09:25,379 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:09:25,380 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:09:25,455 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:21:14,206 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:21:15,547 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:21:15,663 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:21:15,664 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:21:15,727 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:25:49,443 basehttp 124 "GET /static/html/detail.html HTTP/1.1" 304 0
+WARNING 2019-09-04 13:25:49,638 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:25:49,643 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:25:49,711 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:25:50,916 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:25:51,888 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:25:52,004 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:25:52,010 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:25:52,032 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:25:53,727 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:25:54,782 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:25:54,874 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:25:54,874 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:25:54,917 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:25:56,363 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:25:58,538 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:25:58,710 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:25:58,714 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:25:58,733 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:51:29,943 basehttp 124 "GET /static/html/detail.html HTTP/1.1" 304 0
+WARNING 2019-09-04 13:51:30,205 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:51:30,212 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+WARNING 2019-09-04 13:51:30,284 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:51:31,980 basehttp 124 "GET /static/html/detail.html HTTP/1.1" 304 0
+WARNING 2019-09-04 13:51:32,160 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 13:51:32,213 base 152 Not Found: /api/v1.0/houses/undefined/
+WARNING 2019-09-04 13:51:32,215 basehttp 124 "GET /api/v1.0/houses/undefined/ HTTP/1.1" 404 5056
+INFO 2019-09-04 13:51:34,246 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:51:35,235 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+INFO 2019-09-04 13:51:35,258 basehttp 124 "GET /static/html/detail.html?id=6 HTTP/1.1" 200 8198
+WARNING 2019-09-04 13:51:35,417 base 93 Method Not Allowed (GET): /api/v1.0/houses/6/
+WARNING 2019-09-04 13:51:35,418 basehttp 124 "GET /api/v1.0/houses/6/ HTTP/1.1" 405 0
+WARNING 2019-09-04 13:51:35,451 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:51:52,246 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:51:53,562 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:51:53,729 base 93 Method Not Allowed (GET): /api/v1.0/houses/6/
+WARNING 2019-09-04 13:51:53,729 basehttp 124 "GET /api/v1.0/houses/6/ HTTP/1.1" 405 0
+WARNING 2019-09-04 13:51:53,770 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 13:57:31,407 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 13:57:32,444 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 13:57:32,650 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+WARNING 2019-09-04 13:57:32,777 base 93 Method Not Allowed (GET): /api/v1.0/houses/6/
+WARNING 2019-09-04 13:57:32,780 basehttp 124 "GET /api/v1.0/houses/6/ HTTP/1.1" 405 0
+WARNING 2019-09-04 13:57:38,642 base 93 Method Not Allowed (GET): /api/v1.0/houses/6/
+WARNING 2019-09-04 13:57:38,646 basehttp 124 "GET /api/v1.0/houses/6/ HTTP/1.1" 405 0
+INFO 2019-09-04 14:04:05,447 basehttp 124 "GET /api/v1.0/houses/6/ HTTP/1.1" 200 529
+INFO 2019-09-04 14:04:09,174 basehttp 124 "GET /api/v1.0/user/houses/ HTTP/1.1" 200 1273
+INFO 2019-09-04 14:04:10,242 basehttp 124 "GET /detail.html?id=6 HTTP/1.1" 302 0
+WARNING 2019-09-04 14:04:10,480 basehttp 124 "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1754
+INFO 2019-09-04 14:04:10,547 basehttp 124 "GET /api/v1.0/houses/6/ HTTP/1.1" 200 529
+WARNING 2019-09-04 14:04:10,625 basehttp 124 "GET /static/html/h HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,647 basehttp 124 "GET /static/html/t HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,664 basehttp 124 "GET /static/html/p HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,665 basehttp 124 "GET /static/html/: HTTP/1.1" 404 1631
+INFO 2019-09-04 14:04:10,667 basehttp 124 "GET / HTTP/1.1" 302 0
+WARNING 2019-09-04 14:04:10,681 basehttp 124 "GET /static/html/1 HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,690 basehttp 124 "GET /static/html/9 HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,703 basehttp 124 "GET /static/html/2 HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,711 basehttp 124 "GET /static/html/ HTTP/1.1" 404 1621
+WARNING 2019-09-04 14:04:10,726 basehttp 124 "GET /static/html/6 HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,740 basehttp 124 "GET /static/html/8 HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,775 basehttp 124 "GET /static/html/4 HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,802 basehttp 124 "GET /static/html/r HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,817 basehttp 124 "GET /static/html/g HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,833 basehttp 124 "GET /static/html/3 HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,838 basehttp 124 "GET /static/html/o HTTP/1.1" 404 1631
+INFO 2019-09-04 14:04:10,849 basehttp 124 "GET /static/images/houseicon_sprite.png HTTP/1.1" 200 5018
+WARNING 2019-09-04 14:04:10,875 basehttp 124 "GET /static/html/M HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,876 basehttp 124 "GET /static/html/u HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,901 basehttp 124 "GET /static/html/0 HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,905 basehttp 124 "GET /static/html/w HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,931 basehttp 124 "GET /static/html/J HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,932 basehttp 124 "GET /static/html/K HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,941 basehttp 124 "GET /static/html/j HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,950 basehttp 124 "GET /static/html/l HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,964 basehttp 124 "GET /static/html/v HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:10,984 basehttp 124 "GET /static/html/s HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,009 basehttp 124 "GET /static/html/a HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,015 basehttp 124 "GET /static/html/d HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,024 basehttp 124 "GET /static/html/F HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,027 basehttp 124 "GET /static/html/A HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,031 basehttp 124 "GET /static/html/z HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,041 basehttp 124 "GET /static/html/f HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,045 basehttp 124 "GET /static/html/b HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,052 basehttp 124 "GET /static/html/- HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,058 basehttp 124 "GET /static/html/m HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,073 basehttp 124 "GET /static/html/e HTTP/1.1" 404 1631
+WARNING 2019-09-04 14:04:11,074 basehttp 124 "GET /static/html/5 HTTP/1.1" 404 1631

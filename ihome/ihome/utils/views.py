@@ -63,6 +63,7 @@ def get_html_file(request, file_name):
     params = request.GET
     if params:
         result = urlencode(params)
+        return redirect(file_name+'?{}'.format(result))
     return redirect(file_name)
 
 

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'users',
     'address',
     'house',
-
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'ihome.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'static/html')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -206,3 +206,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+LOGIN_URL = '/login/'
+
+# 指定自定义的用户认证后端:
+AUTHENTICATION_BACKENDS = ['users.utils.UsernameMobileAuthBackend']
+
+
+# FDFS客户端的配置文件.
+FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
+# 访问FDFS中存储的文件时,地址有可能变化, 所以我们把地址放在这里记录:
+FDFS_URL = 'http://192.168.9.142:8888/'
+
+# 指定django系统使用的文件存储类:
+DEFAULT_FILE_STORAGE = 'ihome.utils.fastdfs.fastdfs_storage.FastDFSStorage'
